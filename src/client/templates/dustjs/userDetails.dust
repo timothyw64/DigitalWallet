@@ -1,0 +1,46 @@
+{#profiles}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">&nbsp;</div>
+        <div class="col-md-8">
+            {?_id}
+            <div class="row justify-content-center"><h6>Profile for: {firstName} {lastName}</h6></div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <table class="table table-responsive table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Credit Card Company</th>
+                            <th scope="col">Cardholder Name</th>
+                            <th scope="col">Card Number</th>
+                            <th scope="col">Expiration Date</th>
+                            <th scope="col">CVV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#cards}
+                        <tr>
+                            <td>{cardCompany}</td>
+                            <td>{cardHolder}</td>
+                            <td>{cardNumber}</td>
+                            <td>{expDate}</td>
+                            <td>{cvv}</td>
+                        </tr>
+                        {/cards}
+                    </tbody>
+                </table>
+            </div>
+            {:else}
+            <div class="row justify-content-center alert alert-warning" role="alert">
+                No records found for: {firstName} {lastName}
+            </div>
+            {/_id}   
+            <div class="row justify-content-center">
+                <button id="addCreditCard_{_id}" class="btn btn-primary">Add Credit Card</button>
+            </div>
+        </div>
+        <div class="col-md-2">&nbsp;</div>
+    </div>
+    <hr/>
+</div>
+{/profiles}
