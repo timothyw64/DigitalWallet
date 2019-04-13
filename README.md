@@ -1,6 +1,8 @@
 Digital Wallet App
 ==================
 
+Example of using Express, NodeJS, MongoDB, and Backbone.js to create full stack application.
+
 Dependancy
 ------------------
 - MongoDB 4.0.5 (https://www.mongodb.com)
